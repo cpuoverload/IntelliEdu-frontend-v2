@@ -1,0 +1,16 @@
+# 适用于所有文件
+[*]
+charset = utf-8           # 文件编码设置为 UTF-8
+end_of_line = lf          # 使用 LF 作为行结尾（适用于 Unix 和 macOS 系统）
+insert_final_newline = true   # 文件末尾添加换行符
+indent_style = space      # 使用空格进行缩进
+indent_size = 2           # 缩进为 2 个空格
+trim_trailing_whitespace = true  # 删除行尾多余的空格
+
+# 适用于 Makefile 等缩进需要用 Tab 的文件
+[Makefile]
+indent_style = tab
+
+# 适用于 JSON 文件
+[*.json]
+indent_size = 2           # JSON 文件缩进为 2 个空格

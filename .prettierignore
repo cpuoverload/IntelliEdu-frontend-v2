@@ -1,0 +1,94 @@
+# Dependency directories
+node_modules
+bower_components
+
+# Production build output
+dist
+build
+output
+
+# Operating system generated files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Operating System generated files
+*.png
+*.ico
+*.icns
+*.pdf
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Storybook stories
+*.stories.js
+*.stories.tsx
+
+# Ignore all markdown files
+*.md
+
+# Ignore configuration files
+*.yml
+*.yaml
+*.json5
+.editorconfig
+.prettierrc
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+
+# Test and coverage reports
+coverage
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+
+# SVG files
+**/*.svg
+
+# Docker-related files
+.dockerignore
+Dockerfile*
+
+# Gitignore and other ignore files
+.gitignore
+.eslintignore
+.prettierignore
+
+# License and other documentation
+LICENSE
+
+# ESLint cache
+.eslintcache
+
+# History files
+.history
+
+# Domain configuration
+CNAME
+
+# Additional public directory
+/public
