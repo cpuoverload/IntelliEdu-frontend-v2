@@ -1,9 +1,11 @@
 import { RouterProvider } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Center, Loader } from "@mantine/core";
+import { notifications } from "@mantine/notifications";
 import router from "@/routes/router";
 import { getMyInfo } from "@/services//api/userController";
 import useStore from "@/store/store";
+import { USERNAME, PASSWORD } from "./const/demo-account";
 
 export function App() {
   const setUser = useStore((state) => state.setUser);
@@ -20,7 +22,13 @@ export function App() {
         }
       })
       .catch(() => {
-        console.log("unlogin");
+        // 线上演示使用，提示使用管理员账户登录
+        notifications.show({
+          title: "You can login with admin account.",
+          message: `username: ${USERNAME}, password: ${PASSWORD}`,
+          position: "top-center",
+          autoClose: 20000,
+        });
       })
       .finally(() => {
         setLoading(false);

@@ -14,6 +14,7 @@ import { useForm, hasLength } from "@mantine/form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { USERNAME, PASSWORD } from "@/const/formItem";
 import { login } from "@/services/api/userController";
+import { notifications } from "@mantine/notifications";
 import notification from "@/utils/notification";
 import useStore from "@/store/store";
 
@@ -48,6 +49,8 @@ const Index = () => {
       });
       const { code, message, data } = res.data;
       if (code == 0) {
+        // 清除 App.tsx 中提示使用管理员账户登录的通知
+        notifications.clean();
         notification.success("Login Success");
         setUser(data!);
         navigate(from, { replace: true });
